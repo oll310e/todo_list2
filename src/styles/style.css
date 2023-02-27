@@ -88,6 +88,27 @@ main {
   gap: 10px;
 }
 
+.task {
+  border: 2px solid var(--header);
+  background-color: transparent;
+  color: var(--dark-text);
+  display: grid;
+  grid-template-columns: 20px 1fr 100px;
+}
+
+.task > p {
+  padding: 0 10px;
+}
+
+.deleteBtn {
+  background-color: red;
+  text-align: center;
+  color: var(--default-text);
+  display: inline-block;
+  border: none;
+  cursor: pointer;
+}
+
 /* Footer */
 footer {
   background-color: var(--header);
