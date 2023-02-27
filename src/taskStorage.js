@@ -32,7 +32,7 @@ const taskStorage = {
 
       let newTaskDate = document.createElement("p");
       newTaskDate.innerText = `${task.date}`;
-      newTaskName.classList.add("date");
+      newTaskDate.classList.add("date");
 
       newTask.appendChild(newTaskDeleteBtn);
       newTask.appendChild(newTaskName);
