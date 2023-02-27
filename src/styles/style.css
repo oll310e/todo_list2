@@ -82,6 +82,10 @@ menu > ul.menuProjectsList > li:hover {
 /* Main */
 main {
   background-color: var(--main);
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 10px;
 }
 
 /* Footer */
