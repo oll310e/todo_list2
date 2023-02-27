@@ -24,6 +24,7 @@ const taskStorage = {
 
       let newTaskName = document.createElement("p");
       newTaskName.innerText = `${task.name}`;
+      newTaskName.classList.add("name");
 
       let newTaskDeleteBtn = document.createElement("button");
       newTaskDeleteBtn.innerText = "X";
@@ -31,19 +32,21 @@ const taskStorage = {
 
       let newTaskDate = document.createElement("p");
       newTaskDate.innerText = `${task.date}`;
+      newTaskName.classList.add("date");
 
       newTask.appendChild(newTaskDeleteBtn);
       newTask.appendChild(newTaskName);
       newTask.appendChild(newTaskDate);
 
-      DOM.getMain().appendChild(newTask);
+      DOM.getMain().querySelector(".taskList").appendChild(newTask);
     });
   },
 
-  removeTask(taskToRemove) {
+  removeTask(taskToRemoveName) {
     this.tasks.forEach((task, i) => {
-      if (task.name == taskToRemove.name) {
+      if (task.name == taskToRemoveName) {
         this.tasks.splice(i, 1);
+        console.log(this.tasks);
       }
     });
   },
