@@ -1,4 +1,5 @@
 import DOM from "./DOM";
+import taskStorage from "./taskStorage";
 
 const mainContent = {
   main: DOM.getMain(),
@@ -7,6 +8,7 @@ const mainContent = {
   displayHome() {
     this.mainTitle.innerText = "Home";
 
+    taskStorage.displayTasks();
     // this.main.appendChild(homeTitle);
   },
   displayToday() {
